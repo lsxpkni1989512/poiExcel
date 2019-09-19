@@ -65,6 +65,23 @@ public class PoiExcel {
         cell.setCellValue("59.9");// 设置单元格内容，59.9分
 //        cell.setCellStyle(this.text(workbook));
 
+        row = sheet.createRow(++rowNo);
+        row.setHeightInPoints(24);// 设置行高
+
+        //下一行数据
+        cellNo = 1;// 重置单元格下标为1
+        cell = row.createCell(cellNo++);
+        cell.setCellValue("200001");// 设置单元格内容，学号200000
+//        cell.setCellStyle(this.text(workbook));
+
+        cell = row.createCell(cellNo++);
+        cell.setCellValue("老李");// 设置单元格内容，老王
+//        cell.setCellStyle(this.text(workbook));
+
+        cell = row.createCell(cellNo++);
+        cell.setCellValue("58.9");// 设置单元格内容，59.9分
+//        cell.setCellStyle(this.text(workbook));
+
         // 保存，关闭流对象，在C盘生成excel测试.xls文件
         OutputStream os = null;
         try {
